@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Hong Kong Catholic Cathedral of the Immaculate Conception</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts for modern Chinese & English -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation Bar (fixed on top) -->
+  <nav class="navbar">
+    <ul>
+      <li><a href=" ">主頁</a ></li>
+      <li><a href="#">座堂資訊</a ></li>
+      <li><a href="#">禮儀/敬禮</a ></li>
+      <li><a href="#">培育</a ></li>
+      <li><a href="#">最新資訊</a ></li>
+      <li><a href="#">網上捐款</a ></li>
+      <li><a href="#">表格下載</a ></li>
+      <li><a href="#">English Section</a ></li>
+      <li>
+        <a href="#" aria-label="Instagram" class="icon-link">
+          <!-- Minimal Instagram SVG -->
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.5" cy="6.5" r="1"/>
+          </svg>
+        </a >
+      </li>
+      <li>
+        <a href="#" aria-label="Facebook" class="icon-link">
+          <!-- Minimal Facebook SVG -->
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" />
+            <path d="M16 8h-2a2 2 0 0 0-2 2v2h4"/>
+            <line x1="12" y1="16" x2="12" y2="10"/>
+          </svg>
+        </a >
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Title Section -->
+    <header class="page-header">
+      <h1>
+        天主教聖母無原罪教座堂<br>
+        <span class="en-title">The Hong Kong Catholic Cathedral of the Immaculate Conception</span>
+      </h1>
+      <div class="sub-title">成人慕道團</div>
+    </header>
+
+    <!-- Creamy Section: Main Content + PDF -->
+    <section class="cream-section">
+      <div class="intro-text">
+        <strong>
+          「 慕道團 」 是一個信仰培育園地，除聖經及道理知識外，團體中彼此可透過生活分享、交流、參與教會禮儀、活動和服務等，滋養和增長對信仰的認知和熱忱。
+        </strong>
+      </div>
+      <div class="share-title">新敎友分享</div>
+      <div class="carousel-container">
+        <div class="carousel" id="photo-carousel">
+          <!-- Replace src with your actual images -->
+          <img src="subpage 2/IMG_0605.jpg" alt="photo 1"/>
+          <img src="subpage 2/IMG_0606.jpg" alt="photo 2"/>
+          <img src="subpage 2/IMG_0607.jpg" alt="photo 3"/>
+          <img src="subpage 2/IMG_0608.jpg" alt="photo 4"/>
+          <img src="subpage 2/IMG_0609.jpg" alt="photo 5"/>
+        </div>
+      </div>
+      <!-- PDF Link -->
+      <div class="pdf-link">
+        <a href="pdf/Form-C-1_慕道團申請表格-1.pdf" target="_blank">🔔慕道團報名表🔔</a >
+      </div>
+    </section>
+
+    <!-- Transition Section: Main Left Text, Right Image -->
+    <section class="transition-section">
+      <div class="transition-left">
+        <div class="transition-title">成年人領受入門聖事前的慕道培育過程</div>
+        <ul>
+          <li>接受大約一年或以上的培育：</li>
+          <li>† 有系統地學習天主教的信仰。</li>
+          <li>† 孕育出對主的信德和皈依。</li>
+          <li>† 參與教會團體的祈禱、生活和使命。</li>
+          <li>† 加入教會，成為天主的子女，為主作證。</li>
+        </ul>
+      </div>
+      <div class="transition-right">
+        <!-- Replace with your own image -->
+        <img src="subpage 2/IMG_0610.jpg" alt="formation photo" />
+        <div class="img-caption">成人幕道團時間表</div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+      <div class="process-title">入教過程</div>
+      <!-- Replace with your own image -->
+      <img class="process-img" src="subpage 2/IMG_0611.jpg" alt="Process photo"/>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-main">
+      ©2025天主教聖母無原罪主教座堂 版權所有
+    </div>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a >
+      <span>｜</span>
+      <a href="#">Contact Us</a >
+      <span>｜</span>
+      <a href="#">Online Giving</a >
+    </div>
+  </footer>
+
+  <!-- Carousel Script for Auto Slide -->
+  <script>
+    // Simple JS Carousel for 5 images
+    const carousel = document.getElementById('photo-carousel');
+    const images = carousel.getElementsByTagName('img');
+    let idx = 0;
+    function showImage(i) {
+      for (let j = 0; j < images.length; j++) {
+        images[j].style.display = j === i ? 'block' : 'none';
+      }
+    }
+    showImage(idx);
+    setInterval(() => {
+      idx = (idx + 1) % images.length;
+      showImage(idx);
+    }, 2000);
+  </script>
+</body>
+</html>
